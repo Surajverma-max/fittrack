@@ -1,0 +1,300 @@
+.food-log-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.food-log-modal__search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.food-log-modal__search-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--ft-text-muted);
+  pointer-events: none;
+}
+
+.food-log-modal__search-input {
+  width: 100%;
+  padding: 12px 40px 12px 42px;
+  border-radius: var(--ft-radius-md);
+  border: 1px solid var(--ft-border);
+  font-size: 15px;
+  background: var(--ft-surface-subtle);
+  color: var(--ft-text-primary);
+  transition: all var(--ft-duration) ease;
+}
+
+.food-log-modal__search-input:focus {
+  background: #ffffff;
+  border-color: var(--ft-emerald);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.food-log-modal__search-clear {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--ft-radius-full);
+  background: #e2e8f0;
+  color: var(--ft-text-secondary);
+}
+
+.food-log-modal__tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.food-log-modal__tab {
+  padding: 6px 14px;
+  border-radius: var(--ft-radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ft-text-secondary);
+  background: var(--ft-surface-subtle);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: all var(--ft-duration) ease;
+}
+
+.food-log-modal__tab:hover {
+  background: #e2e8f0;
+  color: var(--ft-text-primary);
+}
+
+.food-log-modal__tab--active {
+  background: var(--ft-charcoal);
+  color: #ffffff;
+}
+
+.food-log-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.food-log-modal__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--ft-radius-md);
+  border: 1px solid var(--ft-border-subtle);
+  background: var(--ft-surface);
+  transition: all var(--ft-duration) ease;
+}
+
+.food-log-modal__item:hover {
+  border-color: var(--ft-border);
+  background: var(--ft-surface-hover);
+}
+
+.food-log-modal__item--selected {
+  border-color: var(--ft-emerald);
+  background: var(--ft-emerald-subtle);
+}
+
+.food-log-modal__item-info {
+  flex: 1;
+  cursor: pointer;
+}
+
+.food-log-modal__item-title {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.food-log-modal__food-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+}
+
+.food-log-modal__serving {
+  font-size: 12px;
+  color: var(--ft-text-muted);
+}
+
+.food-log-modal__item-macros {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.food-log-modal__macro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--ft-radius-xs);
+}
+
+.food-log-modal__macro-badge--cal {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.food-log-modal__macro-badge--pro {
+  background: var(--ft-emerald-subtle);
+  color: var(--ft-emerald-dark);
+}
+
+.food-log-modal__macro-sub {
+  font-size: 11px;
+  color: var(--ft-text-muted);
+}
+
+.food-log-modal__add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  border-radius: var(--ft-radius-sm);
+  background: var(--ft-surface-subtle);
+  color: var(--ft-text-primary);
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid var(--ft-border);
+  transition: all var(--ft-duration) ease;
+}
+
+.food-log-modal__add-btn:hover {
+  background: var(--ft-emerald);
+  color: #ffffff;
+  border-color: var(--ft-emerald);
+}
+
+.food-log-modal__stepper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.food-log-modal__step-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--ft-radius-xs);
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ft-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-log-modal__step-input {
+  width: 48px;
+  height: 28px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: var(--ft-radius-xs);
+  padding: 0;
+}
+
+.food-log-modal__confirm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  height: 28px;
+  border-radius: var(--ft-radius-xs);
+  background: var(--ft-emerald);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.food-log-modal__confirm-btn:hover {
+  background: var(--ft-emerald-dark);
+}
+
+/* Custom food form */
+.food-log-modal__custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.food-log-modal__section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+}
+
+.food-log-modal__grid-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.food-log-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.food-log-modal__field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ft-text-secondary);
+}
+
+.food-log-modal__field input {
+  padding: 8px 12px;
+  border-radius: var(--ft-radius-sm);
+  font-size: 14px;
+}
+
+.food-log-modal__btn--primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  border-radius: var(--ft-radius-md);
+  background: var(--ft-emerald);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  transition: background var(--ft-duration) ease;
+}
+
+.food-log-modal__btn--primary:hover {
+  background: var(--ft-emerald-dark);
+}
+
+.food-log-modal__empty {
+  text-align: center;
+  padding: 32px 16px;
+  color: var(--ft-text-muted);
+  font-size: 14px;
+}
+
+.food-log-modal__btn-text {
+  color: var(--ft-emerald-dark);
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 8px;
+  display: inline-block;
+}

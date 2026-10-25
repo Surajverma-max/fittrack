@@ -1,0 +1,621 @@
+.ft-nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.ft-nutrition__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ft-nutrition__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-nutrition__title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ft-charcoal);
+  line-height: 1.15;
+}
+
+.ft-nutrition__subtitle {
+  font-size: 15px;
+  color: var(--ft-text-secondary);
+  font-weight: 500;
+}
+
+.ft-nutrition__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hero Card with Ring & Macros */
+.ft-nutrition__hero-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 36px;
+  padding: 32px;
+  background: var(--ft-surface);
+  border-radius: var(--ft-radius-lg);
+  border: 1px solid var(--ft-border);
+  box-shadow: var(--ft-shadow-sm);
+}
+
+.ft-nutrition__hero-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-nutrition__hero-macros {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.ft-nutrition__hero-macros-header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+  letter-spacing: -0.01em;
+}
+
+/* Sub-Tabs */
+.ft-nutrition__tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--ft-border);
+  padding-bottom: 2px;
+  overflow-x: auto;
+}
+
+.ft-nutrition__tab {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ft-text-muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-nutrition__tab:hover {
+  color: var(--ft-text-primary);
+}
+
+.ft-nutrition__tab--active {
+  color: var(--ft-charcoal);
+  border-bottom-color: var(--ft-emerald);
+}
+
+/* Meal Groups */
+.ft-nutrition__meal-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ft-meal-card {
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  padding: 20px 24px;
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-meal-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--ft-border-subtle);
+}
+
+.ft-meal-card__title-group {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.ft-meal-card__name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-meal-card__count {
+  font-size: 12px;
+  color: var(--ft-text-muted);
+  font-weight: 600;
+}
+
+.ft-meal-card__header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ft-meal-card__macros {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.ft-meal-card__cal {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-meal-card__pro {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-meal-card__add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: var(--ft-radius-full);
+  background: var(--ft-surface-subtle);
+  border: 1px solid var(--ft-border);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-text-primary);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-meal-card__add-btn:hover {
+  background: var(--ft-emerald);
+  color: #ffffff;
+  border-color: var(--ft-emerald);
+}
+
+.ft-meal-card__empty {
+  padding: 20px;
+  text-align: center;
+  background: var(--ft-surface-subtle);
+  border-radius: var(--ft-radius-sm);
+  border: 1px dashed var(--ft-border);
+  cursor: pointer;
+  color: var(--ft-text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-meal-card__empty:hover {
+  background: var(--ft-emerald-subtle);
+  color: var(--ft-emerald-dark);
+  border-color: var(--ft-emerald-border);
+}
+
+.ft-meal-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ft-meal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: var(--ft-radius-sm);
+  background: var(--ft-surface-subtle);
+  transition: background var(--ft-duration) ease;
+}
+
+.ft-meal-item:hover {
+  background: #f1f5f9;
+}
+
+.ft-meal-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ft-meal-item__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+}
+
+.ft-meal-item__meta {
+  font-size: 12px;
+  color: var(--ft-text-muted);
+}
+
+.ft-meal-item__macros {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.ft-meal-item__cal {
+  font-weight: 700;
+  color: var(--ft-charcoal);
+}
+
+.ft-meal-item__pro {
+  font-weight: 700;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-meal-item__sub {
+  font-size: 11px;
+  color: var(--ft-text-muted);
+}
+
+.ft-meal-item__del {
+  padding: 6px;
+  border-radius: var(--ft-radius-xs);
+  color: var(--ft-text-muted);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-meal-item__del:hover {
+  color: var(--ft-rose);
+  background: var(--ft-rose-subtle);
+}
+
+/* Food Catalog Grid */
+.ft-nutrition__search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  margin-bottom: 20px;
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-nutrition__search-bar input {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  width: 100%;
+}
+
+.ft-foods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.ft-food-catalog-card {
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: var(--ft-shadow-xs);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-food-catalog-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ft-border-strong);
+  box-shadow: var(--ft-shadow-sm);
+}
+
+.ft-food-catalog-card__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  margin-bottom: 2px;
+}
+
+.ft-food-catalog-card__serving {
+  font-size: 12px;
+  color: var(--ft-text-muted);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ft-food-catalog-card__macros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ft-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--ft-radius-xs);
+}
+
+.ft-pill--cal {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.ft-pill--pro {
+  background: var(--ft-emerald-subtle);
+  color: var(--ft-emerald-dark);
+}
+
+.ft-pill--sub {
+  background: var(--ft-surface-subtle);
+  color: var(--ft-text-secondary);
+}
+
+.ft-food-catalog-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px;
+  border-radius: var(--ft-radius-sm);
+  background: var(--ft-surface-subtle);
+  border: 1px solid var(--ft-border);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-text-primary);
+  width: 100%;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-food-catalog-card__btn:hover {
+  background: var(--ft-emerald);
+  color: #ffffff;
+  border-color: var(--ft-emerald);
+}
+
+.ft-food-catalog-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ft-food-catalog-card__del-btn {
+  padding: 8px 12px;
+  border-radius: var(--ft-radius-sm);
+  background: var(--ft-rose-subtle);
+  color: var(--ft-rose);
+}
+
+/* Quick Add Recents list */
+.ft-nutrition__recents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ft-nutrition__recents-header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-nutrition__recents-header p {
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ft-recent-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-recent-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+}
+
+.ft-recent-card__sub {
+  font-size: 12px;
+  color: var(--ft-text-muted);
+  display: block;
+  margin: 2px 0 4px;
+}
+
+.ft-recent-card__macros {
+  display: flex;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-recent-card__btn {
+  padding: 8px 18px;
+}
+
+/* Weekly Analytics */
+.ft-analytics-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.ft-stat-box {
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-stat-box__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ft-text-muted);
+}
+
+.ft-stat-box__val {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-stat-box__sub {
+  font-size: 11px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-chart-card {
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-chart-card__header {
+  margin-bottom: 20px;
+}
+
+.ft-chart-card__eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ft-text-muted);
+}
+
+.ft-chart-card__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-custom-tooltip {
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: var(--ft-radius-md);
+  box-shadow: var(--ft-shadow-lg);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ft-custom-tooltip__title {
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+.ft-custom-tooltip__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ft-analytics-table-wrap {
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.ft-analytics-table th {
+  background: var(--ft-surface-subtle);
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ft-text-muted);
+  border-bottom: 1px solid var(--ft-border);
+}
+
+.ft-analytics-table td {
+  padding: 14px 18px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--ft-border-subtle);
+}
+
+.ft-analytics-table__today {
+  background: var(--ft-emerald-subtle);
+}
+
+.ft-empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  background: #ffffff;
+  border: 1px dashed var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ft-empty-state svg {
+  color: var(--ft-emerald);
+}
+
+.ft-empty-state h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-empty-state p {
+  font-size: 14px;
+  color: var(--ft-text-secondary);
+  max-width: 400px;
+}
+
+@media (max-width: 900px) {
+  .ft-nutrition__hero-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 20px;
+  }
+}

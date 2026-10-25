@@ -1,0 +1,426 @@
+.ft-workout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 80px; /* Space for sticky bar */
+}
+
+/* Header */
+.ft-workout__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ft-workout__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-workout__title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ft-charcoal);
+  line-height: 1.15;
+}
+
+.ft-workout__subtitle {
+  font-size: 15px;
+  color: var(--ft-text-secondary);
+}
+
+/* Day Selector */
+.ft-day-selector {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.ft-day-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 12px 6px;
+  border-radius: var(--ft-radius-md);
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  box-shadow: var(--ft-shadow-xs);
+  transition: all var(--ft-duration) ease;
+  position: relative;
+}
+
+.ft-day-pill:hover {
+  border-color: var(--ft-border-strong);
+  background: var(--ft-surface-hover);
+}
+
+.ft-day-pill--active {
+  background: var(--ft-charcoal);
+  border-color: var(--ft-charcoal);
+  color: #ffffff;
+  box-shadow: var(--ft-shadow-sm);
+}
+
+.ft-day-pill__label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--ft-text-secondary);
+}
+
+.ft-day-pill--active .ft-day-pill__label {
+  color: #ffffff;
+}
+
+.ft-day-pill__sub {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ft-text-muted);
+}
+
+.ft-day-pill--active .ft-day-pill__sub {
+  color: var(--ft-emerald);
+}
+
+.ft-day-pill__dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--ft-radius-full);
+  background: var(--ft-emerald);
+}
+
+/* Workout Overview Banner */
+.ft-workout-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  padding: 24px 28px;
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-workout-hero__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ft-workout-hero__title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ft-workout-hero__name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+  letter-spacing: -0.01em;
+}
+
+.ft-workout-hero__progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ft-workout-hero__progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-workout-hero__progress-labels strong {
+  color: var(--ft-emerald-dark);
+}
+
+.ft-workout-hero__track {
+  width: 100%;
+  height: 8px;
+  background: var(--ft-surface-subtle);
+  border-radius: var(--ft-radius-full);
+  overflow: hidden;
+}
+
+.ft-workout-hero__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #059669);
+  border-radius: var(--ft-radius-full);
+  transition: width 0.6s var(--ft-ease);
+}
+
+.ft-workout-hero__metrics {
+  display: flex;
+  gap: 14px;
+}
+
+.ft-workout-stat-box {
+  background: var(--ft-surface-subtle);
+  border-radius: var(--ft-radius-md);
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 110px;
+}
+
+.ft-workout-stat-box__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ft-text-muted);
+}
+
+.ft-workout-stat-box__val {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-workout-stat-box__unit {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ft-text-muted);
+}
+
+/* Rest Card */
+.ft-rest-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  border: 1px solid var(--ft-emerald-border);
+  border-radius: var(--ft-radius-lg);
+}
+
+.ft-rest-card__icon-box {
+  font-size: 44px;
+}
+
+.ft-rest-card__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ft-emerald-dark);
+  margin-bottom: 6px;
+}
+
+.ft-rest-card__desc {
+  font-size: 14px;
+  color: #047857;
+  line-height: 1.5;
+}
+
+/* Exercises List */
+.ft-workout__exercises-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Floating Bottom Sticky Bar */
+.ft-workout-sticky-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 280px;
+  right: 44px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: var(--ft-radius-lg);
+  box-shadow: var(--ft-shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 900;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.ft-workout-sticky-bar__stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.ft-workout-sticky-bar__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  display: block;
+}
+
+.ft-workout-sticky-bar__stats strong {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ft-workout-sticky-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ft-workout-finish-btn {
+  background: var(--ft-emerald);
+  color: #ffffff;
+}
+
+.ft-workout-finish-btn:hover {
+  background: var(--ft-emerald-dark);
+}
+
+/* Completion Modal */
+.ft-completion-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ft-completion-modal__badge {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--ft-radius-full);
+  background: linear-gradient(135deg, #fef08a, #facc15);
+  color: #854d0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(234, 179, 8, 0.3);
+}
+
+.ft-completion-modal__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-completion-modal__sub {
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.ft-completion-modal__metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  background: var(--ft-surface-subtle);
+  padding: 14px;
+  border-radius: var(--ft-radius-md);
+  margin-bottom: 16px;
+}
+
+.ft-completion-modal__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ft-completion-modal__metric span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ft-text-muted);
+}
+
+.ft-completion-modal__metric strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-completion-modal__prs {
+  width: 100%;
+  padding: 16px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--ft-radius-md);
+  margin-bottom: 12px;
+}
+
+.ft-completion-modal__pr-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #92400e;
+  margin-bottom: 8px;
+}
+
+.ft-completion-modal__pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ft-completion-modal__pr-chip {
+  font-size: 13px;
+  font-weight: 700;
+  color: #78350f;
+  background: #fef3c7;
+  padding: 6px 12px;
+  border-radius: var(--ft-radius-sm);
+}
+
+.ft-completion-modal__note {
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .ft-workout-hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ft-workout-sticky-bar {
+    left: 20px;
+    right: 20px;
+    bottom: 74px; /* Above mobile bottom nav */
+  }
+}
+
+@media (max-width: 640px) {
+  .ft-day-selector {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .ft-workout-sticky-bar {
+    padding: 12px 16px;
+  }
+
+  .ft-workout-sticky-bar__stats {
+    gap: 12px;
+  }
+}

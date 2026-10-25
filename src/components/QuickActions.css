@@ -1,0 +1,111 @@
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.quick-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  box-shadow: var(--ft-shadow-xs);
+  text-align: left;
+  transition: all var(--ft-duration) var(--ft-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-action-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--ft-border-strong);
+  box-shadow: var(--ft-shadow-sm);
+}
+
+.quick-action-btn--primary {
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  border-color: var(--ft-charcoal);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+}
+
+.quick-action-btn--primary:hover {
+  background: #1e293b;
+  border-color: #1e293b;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.22);
+}
+
+.quick-action-btn__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--ft-radius-sm);
+  background: var(--ft-surface-subtle);
+  color: var(--ft-text-primary);
+  flex-shrink: 0;
+  transition: transform var(--ft-duration) ease;
+}
+
+.quick-action-btn:hover .quick-action-btn__icon-wrap {
+  transform: scale(1.08);
+}
+
+.quick-action-btn__icon-wrap--emerald {
+  background: var(--ft-emerald);
+  color: #ffffff;
+}
+
+.quick-action-btn__text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.quick-action-btn__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quick-action-btn--primary .quick-action-btn__label {
+  color: #ffffff;
+}
+
+.quick-action-btn__sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ft-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+.quick-action-btn--primary .quick-action-btn__sub {
+  color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+  .quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .quick-actions {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .quick-action-btn {
+    padding: 12px 14px;
+  }
+}

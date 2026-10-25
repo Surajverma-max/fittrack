@@ -1,0 +1,260 @@
+.ft-exercise-card {
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--ft-shadow-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all var(--ft-duration) var(--ft-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.ft-exercise-card:hover {
+  box-shadow: var(--ft-shadow-sm);
+  border-color: var(--ft-border-strong);
+}
+
+.ft-exercise-card--completed {
+  border-color: var(--ft-emerald-border);
+  background: linear-gradient(180deg, #ffffff 0%, var(--ft-emerald-subtle) 100%);
+}
+
+.ft-exercise-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ft-exercise-card__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ft-exercise-card__muscle-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ft-emerald-dark);
+  background: var(--ft-emerald-subtle);
+  padding: 2px 8px;
+  border-radius: var(--ft-radius-xs);
+  display: inline-block;
+  width: fit-content;
+}
+
+.ft-exercise-card__name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+  letter-spacing: -0.01em;
+}
+
+.ft-exercise-card__target-label {
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-exercise-card__target-label strong {
+  color: var(--ft-text-primary);
+}
+
+.ft-exercise-card__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ft-exercise-card__done-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--ft-radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--ft-surface-subtle);
+  border: 1px solid var(--ft-border);
+  color: var(--ft-text-secondary);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-exercise-card__done-toggle:hover {
+  background: #e2e8f0;
+  color: var(--ft-text-primary);
+}
+
+.ft-exercise-card__done-toggle--active {
+  background: var(--ft-emerald);
+  border-color: var(--ft-emerald);
+  color: #ffffff;
+}
+
+.ft-exercise-card__del-btn {
+  padding: 8px;
+  border-radius: var(--ft-radius-full);
+  color: var(--ft-text-muted);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-exercise-card__del-btn:hover {
+  color: var(--ft-rose);
+  background: var(--ft-rose-subtle);
+}
+
+/* Quick Steppers for Weight and Reps */
+.ft-exercise-card__quick-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: var(--ft-surface-subtle);
+  padding: 14px 18px;
+  border-radius: var(--ft-radius-md);
+  border: 1px solid var(--ft-border-subtle);
+}
+
+.ft-exercise-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ft-exercise-stepper__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ft-text-muted);
+}
+
+.ft-exercise-stepper__controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ft-exercise-stepper__btn {
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  box-shadow: var(--ft-shadow-xs);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-exercise-stepper__btn:hover {
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  border-color: var(--ft-charcoal);
+}
+
+.ft-exercise-stepper__input-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.ft-exercise-stepper__input-wrap input {
+  width: 100%;
+  padding: 8px 36px 8px 12px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+  border-radius: var(--ft-radius-sm);
+  background: #ffffff;
+}
+
+.ft-exercise-stepper__unit {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ft-text-muted);
+  pointer-events: none;
+}
+
+/* Visual Set Rows */
+.ft-exercise-card__sets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--ft-border-subtle);
+  padding-top: 12px;
+}
+
+.ft-set-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: var(--ft-radius-sm);
+  background: #ffffff;
+  border: 1px solid var(--ft-border-subtle);
+  cursor: pointer;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-set-row:hover {
+  border-color: var(--ft-border);
+  background: var(--ft-surface-hover);
+}
+
+.ft-set-row--done {
+  background: var(--ft-emerald-subtle);
+  border-color: var(--ft-emerald-border);
+}
+
+.ft-set-row__num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ft-text-secondary);
+}
+
+.ft-set-row__metrics {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+}
+
+.ft-set-row__check {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--ft-radius-full);
+  border: 1.5px solid var(--ft-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-set-row__check--checked {
+  background: var(--ft-emerald);
+  border-color: var(--ft-emerald);
+  color: #ffffff;
+}
+
+.ft-exercise-card__cardio-note {
+  padding: 12px;
+  background: var(--ft-emerald-subtle);
+  border-radius: var(--ft-radius-sm);
+  font-size: 13px;
+  color: var(--ft-emerald-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .ft-exercise-card__quick-inputs {
+    grid-template-columns: 1fr;
+  }
+}

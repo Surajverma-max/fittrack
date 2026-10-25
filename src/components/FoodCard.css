@@ -1,0 +1,170 @@
+.food-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  gap: 16px;
+}
+
+.food-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.food-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.food-card__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 3px 0;
+}
+
+.food-card__serving {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin: 0 0 8px 0;
+}
+
+.food-card__macros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.food-card__macro {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  line-height: 1.2;
+}
+
+.food-card__macro--cal {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.food-card__macro--protein {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.food-card__macro--carbs {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.food-card__macro--fat {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.food-card__qty-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.food-card__input {
+  width: 64px;
+  height: 36px;
+  padding: 4px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e293b;
+  text-align: center;
+  outline: none;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.food-card__input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.food-card__confirm {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  background-color: #10b981;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.food-card__confirm:hover {
+  background-color: #059669;
+}
+
+.food-card__confirm:active {
+  transform: scale(0.95);
+}
+
+.food-card__cancel {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.food-card__cancel:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.food-card__cancel:active {
+  transform: scale(0.95);
+}
+
+.food-card__add-btn {
+  height: 36px;
+  padding: 0 16px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.food-card__add-btn:hover {
+  background-color: #4338ca;
+}
+
+.food-card__add-btn:active {
+  transform: scale(0.98);
+}

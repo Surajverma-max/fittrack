@@ -1,0 +1,103 @@
+.calorie-ring {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.calorie-ring__svg {
+  transform: rotate(-90deg);
+  display: block;
+}
+
+.calorie-ring__track {
+  fill: none;
+  stroke: #f1f5f9;
+  transition: stroke var(--ft-duration) ease;
+}
+
+.calorie-ring__progress {
+  fill: none;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.4s ease;
+}
+
+.calorie-ring__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  pointer-events: none;
+}
+
+.calorie-ring__badge {
+  margin-bottom: 2px;
+}
+
+.calorie-ring__badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: var(--ft-radius-full);
+  background: var(--ft-surface-subtle);
+  color: var(--ft-text-secondary);
+}
+
+.calorie-ring__badge-pill--met {
+  background: var(--ft-emerald-subtle);
+  color: var(--ft-emerald-dark);
+}
+
+.calorie-ring__badge-pill--over {
+  background: var(--ft-rose-subtle);
+  color: var(--ft-rose);
+}
+
+.calorie-ring__main-num {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ft-charcoal);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+.calorie-ring--over .calorie-ring__main-num {
+  color: var(--ft-rose);
+}
+
+.calorie-ring--met .calorie-ring__main-num {
+  color: var(--ft-emerald-dark);
+}
+
+.calorie-ring__subtext {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ft-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.calorie-ring__consumed {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--ft-text-secondary);
+  background: rgba(241, 245, 249, 0.7);
+  padding: 2px 10px;
+  border-radius: var(--ft-radius-full);
+}
+
+.calorie-ring__consumed strong {
+  color: var(--ft-text-primary);
+  font-weight: 700;
+}

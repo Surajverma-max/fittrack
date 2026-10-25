@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand & Core Palette */
+  --ft-canvas: #f8fafc;
+  --ft-surface: #ffffff;
+  --ft-surface-subtle: #f1f5f9;
+  --ft-surface-hover: #f8fafc;
+  
+  --ft-charcoal: #0f172a;
+  --ft-charcoal-light: #1e293b;
+  --ft-text-primary: #0f172a;
+  --ft-text-secondary: #475569;
+  --ft-text-muted: #94a3b8;
+  --ft-text-inverse: #ffffff;
+
+  /* Accent: Vibrant Emerald (Health & Goal Success) */
+  --ft-emerald: #10b981;
+  --ft-emerald-dark: #059669;
+  --ft-emerald-subtle: #ecfdf5;
+  --ft-emerald-border: #a7f3d0;
+
+  /* Warm Warnings & Alerts */
+  --ft-amber: #f59e0b;
+  --ft-amber-subtle: #fffbeb;
+  --ft-amber-border: #fde68a;
+
+  --ft-rose: #ef4444;
+  --ft-rose-subtle: #fef2f2;
+  --ft-rose-border: #fecaca;
+
+  --ft-indigo: #6366f1;
+  --ft-indigo-subtle: #eef2ff;
+
+  --ft-border: #e2e8f0;
+  --ft-border-subtle: #f1f5f9;
+
+  /* Elevation & Shadows */
+  --ft-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --ft-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --ft-shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --ft-shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+  --ft-shadow-modal: 0 24px 48px -12px rgba(15, 23, 42, 0.22);
+
+  /* Radiuses */
+  --ft-radius-xs: 6px;
+  --ft-radius-sm: 10px;
+  --ft-radius-md: 14px;
+  --ft-radius-lg: 20px;
+  --ft-radius-xl: 28px;
+  --ft-radius-full: 9999px;
+
+  /* Transitions */
+  --ft-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ft-duration: 0.18s;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--ft-canvas);
+  color: var(--ft-text-primary);
+  height: 100%;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ft-text-primary);
+  background-color: var(--ft-canvas);
+  line-height: 1.5;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  user-select: none;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Global Button Classes */
+.ft-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--ft-radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--ft-duration) var(--ft-ease);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.ft-btn--primary {
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.ft-btn--primary:hover {
+  background: #1e293b;
+  box-shadow: var(--ft-shadow-sm);
+}
+
+.ft-btn--secondary {
+  background: var(--ft-surface-subtle);
+  color: var(--ft-text-primary);
+  border: 1px solid var(--ft-border);
+}
+
+.ft-btn--secondary:hover {
+  background: #e2e8f0;
+}
+
+.ft-btn--emerald {
+  background: var(--ft-emerald);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.ft-btn--emerald:hover {
+  background: var(--ft-emerald-dark);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.ft-btn--full {
+  width: 100%;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--ft-text-primary);
+  border: 1px solid var(--ft-border);
+  background: var(--ft-surface);
+  border-radius: var(--ft-radius-sm);
+  outline: none;
+  transition: border-color var(--ft-duration) var(--ft-ease), box-shadow var(--ft-duration) var(--ft-ease);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--ft-emerald);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+/* Number inputs without annoying spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--ft-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes ftFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ftSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ftPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.ft-animate-fade {
+  animation: ftFadeIn 0.24s var(--ft-ease) forwards;
+}
+
+.ft-animate-slide-up {
+  animation: ftSlideUp 0.3s var(--ft-ease) forwards;
+}
+
+/* Global Recharts styling enhancements */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--ft-border-subtle) !important;
+}
+
+.recharts-default-tooltip {
+  border-radius: var(--ft-radius-md) !important;
+  border: 1px solid var(--ft-border) !important;
+  background: var(--ft-charcoal) !important;
+  color: #ffffff !important;
+  box-shadow: var(--ft-shadow-lg) !important;
+  padding: 10px 14px !important;
+  font-family: inherit !important;
+}

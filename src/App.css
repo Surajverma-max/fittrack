@@ -1,0 +1,56 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--ft-canvas);
+  color: var(--ft-text-primary);
+}
+
+.app__main {
+  flex: 1;
+  margin-left: 250px;
+  padding: 36px 44px;
+  min-height: 100vh;
+  max-width: 1320px;
+  width: calc(100% - 250px);
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .app__main {
+    padding: 28px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app__main {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 16px 88px; /* 88px bottom padding to clear the 64px mobile BottomNav */
+  }
+}
+
+.ft-loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--ft-canvas);
+  color: var(--ft-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ft-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--ft-border);
+  border-top-color: var(--ft-emerald);
+  border-radius: 50%;
+  animation: ftSpin 0.7s linear infinite;
+}
+
+@keyframes ftSpin {
+  to { transform: rotate(360deg); }
+}

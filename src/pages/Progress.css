@@ -1,0 +1,263 @@
+.ft-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ft-progress__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ft-progress__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-progress__title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ft-charcoal);
+  line-height: 1.15;
+}
+
+.ft-progress__subtitle {
+  font-size: 15px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-progress__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Transformation Hero Banner */
+.ft-transformation-hero {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr 1.3fr;
+  align-items: center;
+  gap: 20px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  padding: 24px 28px;
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-transformation-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ft-transformation-hero__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ft-text-muted);
+}
+
+.ft-transformation-hero__val {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+  letter-spacing: -0.02em;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+.ft-transformation-hero__unit {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ft-text-muted);
+}
+
+.ft-transformation-hero__note {
+  font-size: 12px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-transformation-hero__arrow {
+  font-size: 24px;
+  color: var(--ft-emerald-dark);
+  font-weight: 800;
+  text-align: center;
+}
+
+.ft-transformation-hero__stat--change {
+  background: var(--ft-emerald-subtle);
+  border: 1px solid var(--ft-emerald-border);
+  padding: 16px 20px;
+  border-radius: var(--ft-radius-md);
+}
+
+.ft-transformation-hero__val--green {
+  color: var(--ft-emerald-dark);
+}
+
+.ft-transformation-hero__badge {
+  font-size: 11px;
+  font-weight: 800;
+  color: #047857;
+  text-transform: uppercase;
+}
+
+/* Historical Milestone Tags */
+.ft-progress__tags-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid var(--ft-border-subtle);
+  margin-top: 16px;
+}
+
+.ft-progress__tags-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ft-text-muted);
+}
+
+.ft-progress-pill {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: var(--ft-surface-subtle);
+  border-radius: var(--ft-radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-progress-pill strong {
+  color: var(--ft-charcoal);
+}
+
+.ft-progress-pill__del {
+  font-size: 11px;
+  color: var(--ft-text-muted);
+  padding: 2px;
+  cursor: pointer;
+}
+
+.ft-progress-pill__del:hover {
+  color: var(--ft-rose);
+}
+
+/* Strength PR Grid */
+.ft-strength-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.ft-strength-card {
+  background: var(--ft-surface-subtle);
+  border: 1px solid var(--ft-border-subtle);
+  border-radius: var(--ft-radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-strength-card:hover {
+  background: #ffffff;
+  border-color: var(--ft-border);
+  box-shadow: var(--ft-shadow-xs);
+}
+
+.ft-strength-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ft-strength-card__icon {
+  font-size: 20px;
+}
+
+.ft-strength-card__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+}
+
+.ft-strength-card__body {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.ft-strength-card__val {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--ft-charcoal);
+}
+
+.ft-strength-card__unit {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ft-text-muted);
+}
+
+.ft-strength-card__edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-strength-card__edit-btn:hover {
+  color: #047857;
+}
+
+.ft-strength-card__edit-wrap input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.ft-strength-card__edit-actions {
+  display: flex;
+  gap: 6px;
+}
+
+@media (max-width: 900px) {
+  .ft-transformation-hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ft-transformation-hero__arrow {
+    display: none;
+  }
+  .ft-strength-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .ft-transformation-hero {
+    grid-template-columns: 1fr;
+  }
+  .ft-strength-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

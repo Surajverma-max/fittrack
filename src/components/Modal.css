@@ -1,0 +1,103 @@
+.ft-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: ftFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.ft-modal-container {
+  width: 100%;
+  background: var(--ft-surface);
+  border-radius: var(--ft-radius-lg);
+  border: 1px solid var(--ft-border);
+  box-shadow: var(--ft-shadow-modal);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  animation: ftSlideUp 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.ft-modal-sheet-handle {
+  display: none;
+  width: 36px;
+  height: 4px;
+  background: #cbd5e1;
+  border-radius: var(--ft-radius-full);
+  margin: 10px auto 0;
+}
+
+.ft-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--ft-border-subtle);
+}
+
+.ft-modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  letter-spacing: -0.01em;
+}
+
+.ft-modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--ft-radius-full);
+  background: var(--ft-surface-subtle);
+  color: var(--ft-text-muted);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-modal-close-btn:hover {
+  background: var(--ft-border);
+  color: var(--ft-text-primary);
+}
+
+.ft-modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Mobile Bottom Sheet transform */
+@media (max-width: 640px) {
+  .ft-modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .ft-modal-container {
+    max-width: 100% !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--ft-radius-xl);
+    border-top-right-radius: var(--ft-radius-xl);
+    max-height: 85vh;
+  }
+
+  .ft-modal-sheet-handle {
+    display: block;
+  }
+
+  .ft-modal-header {
+    padding: 12px 20px 14px;
+  }
+
+  .ft-modal-body {
+    padding: 16px 20px 28px;
+  }
+}

@@ -1,0 +1,373 @@
+/* Onboarding Styles */
+
+.ft-onboarding-page {
+  min-height: 100vh;
+  background-color: var(--ft-canvas);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.ft-onboarding-container {
+  width: 100%;
+  max-width: 640px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-xl);
+  padding: 40px 36px;
+  box-shadow: var(--ft-shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Steps Header */
+.ft-onboarding-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--ft-border-subtle);
+  margin-bottom: 28px;
+}
+
+.ft-onboarding-steps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ft-step-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ft-surface-subtle);
+  border: 1px solid var(--ft-border);
+  color: var(--ft-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-step-dot.active {
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  border-color: var(--ft-charcoal);
+}
+
+.ft-step-dot.completed {
+  background: var(--ft-emerald);
+  color: #ffffff;
+  border-color: var(--ft-emerald);
+}
+
+.ft-onboarding-step-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Step Content */
+.ft-onboarding-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.ft-onboarding-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ft-emerald-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.ft-onboarding-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ft-charcoal);
+  line-height: 1.2;
+}
+
+.ft-onboarding-desc {
+  font-size: 15px;
+  color: var(--ft-text-secondary);
+  margin-top: 6px;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* Forms */
+.ft-onboarding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ft-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.ft-form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-text-primary);
+}
+
+.ft-form-group small {
+  font-size: 12px;
+  color: var(--ft-text-muted);
+}
+
+.ft-form-group input {
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+.ft-form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.ft-radio-pills {
+  display: flex;
+  gap: 8px;
+  height: 44px;
+}
+
+.ft-pill-btn {
+  flex: 1;
+  border: 1px solid var(--ft-border);
+  background: var(--ft-surface-subtle);
+  border-radius: var(--ft-radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ft-text-secondary);
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-pill-btn.active {
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  border-color: var(--ft-charcoal);
+}
+
+/* Option Cards (Activity & Goals) */
+.ft-options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ft-option-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--ft-surface);
+  border: 1.5px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  cursor: pointer;
+  transition: all var(--ft-duration) ease;
+}
+
+.ft-option-card:hover {
+  border-color: #cbd5e1;
+  background: var(--ft-surface-hover);
+}
+
+.ft-option-card.active {
+  border-color: var(--ft-emerald);
+  background: var(--ft-emerald-subtle);
+}
+
+.ft-option-card__radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--ft-border);
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color var(--ft-duration) ease;
+}
+
+.ft-option-card.active .ft-option-card__radio {
+  border-color: var(--ft-emerald);
+}
+
+.ft-option-card__radio .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background var(--ft-duration) ease;
+}
+
+.ft-option-card.active .ft-option-card__radio .dot {
+  background: var(--ft-emerald);
+}
+
+.ft-option-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ft-option-card__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ft-option-card__title strong {
+  font-size: 15px;
+  color: var(--ft-charcoal);
+}
+
+.ft-option-card__title .badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(15, 23, 42, 0.06);
+  padding: 2px 8px;
+  border-radius: var(--ft-radius-full);
+  color: var(--ft-text-secondary);
+}
+
+.ft-option-card.active .ft-option-card__title .badge {
+  background: var(--ft-emerald-border);
+  color: var(--ft-emerald-dark);
+}
+
+.ft-option-card__desc {
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+  line-height: 1.4;
+}
+
+/* Target & Macro Previews */
+.ft-target-card {
+  background: var(--ft-surface-subtle);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.ft-calorie-badge {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: var(--ft-radius-sm);
+}
+
+.ft-calorie-badge strong {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ft-emerald);
+}
+
+.ft-calorie-badge span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.ft-macro-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ft-macro-preview-card {
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ft-macro-preview-card--protein {
+  border-color: var(--ft-emerald-border);
+  background: #f0fdf4;
+}
+
+.ft-macro-preview-card .label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--ft-text-muted);
+}
+
+.ft-macro-preview-card--protein .label {
+  color: var(--ft-emerald-dark);
+}
+
+.ft-macro-preview-card .val-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ft-macro-preview-card input {
+  width: 70px;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.ft-macro-preview-card .unit {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ft-text-secondary);
+}
+
+.ft-macro-preview-card .sub {
+  font-size: 11px;
+  color: var(--ft-text-muted);
+}
+
+/* Actions */
+.ft-onboarding-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ft-border-subtle);
+}
+
+.ft-onboarding-next-btn {
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+@media (max-width: 640px) {
+  .ft-onboarding-container {
+    padding: 24px 20px;
+  }
+  .ft-form-row {
+    flex-direction: column;
+  }
+  .ft-macro-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}

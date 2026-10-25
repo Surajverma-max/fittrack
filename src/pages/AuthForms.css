@@ -1,0 +1,237 @@
+/* Shared Auth Page Styles */
+
+.ft-auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background-color: var(--ft-canvas);
+}
+
+.ft-auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--ft-shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.ft-auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ft-auth-logo-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--ft-radius-sm);
+  background: var(--ft-charcoal);
+  color: var(--ft-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-auth-brand-name {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ft-charcoal);
+  line-height: 1;
+  display: block;
+}
+
+.ft-auth-brand-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--ft-text-muted);
+  margin-top: 3px;
+  display: block;
+}
+
+.ft-auth-header {
+  margin-bottom: 24px;
+}
+
+.ft-auth-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ft-charcoal);
+}
+
+.ft-auth-subtitle {
+  font-size: 14px;
+  color: var(--ft-text-secondary);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.ft-auth-error {
+  background: var(--ft-rose-subtle);
+  border: 1px solid var(--ft-rose-border);
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: var(--ft-radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  animation: ftFadeIn 0.2s ease;
+}
+
+.ft-auth-success {
+  background: var(--ft-emerald-subtle);
+  border: 1px solid var(--ft-emerald-border);
+  padding: 24px;
+  border-radius: var(--ft-radius-md);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ft-auth-success__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ft-emerald);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.ft-auth-success h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  margin-bottom: 6px;
+}
+
+.ft-auth-success p {
+  font-size: 14px;
+  color: var(--ft-text-secondary);
+  line-height: 1.4;
+}
+
+.ft-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ft-auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ft-auth-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-text-primary);
+}
+
+.ft-auth-field__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ft-auth-field input {
+  padding: 11px 14px;
+  font-size: 15px;
+}
+
+.ft-auth-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-auth-link:hover {
+  text-decoration: underline;
+}
+
+.ft-auth-remember {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ft-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ft-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--ft-emerald);
+  cursor: pointer;
+}
+
+.ft-auth-submit-btn {
+  margin-top: 6px;
+  padding: 12px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.ft-auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 22px 0 16px;
+}
+
+.ft-auth-divider::before,
+.ft-auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--ft-border);
+}
+
+.ft-auth-divider span {
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ft-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ft-auth-demo-btn {
+  width: 100%;
+  padding: 11px;
+  font-size: 14px;
+}
+
+.ft-auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+}
+
+.ft-auth-link-bold {
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  margin-left: 4px;
+}
+
+.ft-auth-link-bold:hover {
+  color: var(--ft-emerald-dark);
+}

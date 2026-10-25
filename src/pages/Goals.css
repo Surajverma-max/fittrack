@@ -1,0 +1,282 @@
+/* FitTrack - Targets & Goals Stylesheet */
+
+.ft-goals {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Floating Success Toast */
+.ft-toast {
+  position: sticky;
+  top: 16px;
+  z-index: 60;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--ft-emerald);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: var(--ft-radius-full);
+  box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+/* Page Header */
+.ft-goals__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ft-goals__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ft-emerald-dark);
+}
+
+.ft-goals__title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ft-charcoal);
+  line-height: 1.15;
+}
+
+.ft-goals__subtitle {
+  font-size: 15px;
+  color: var(--ft-text-secondary);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Form Container */
+.ft-goals__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Parameter Configuration Cards */
+.ft-goals-card {
+  background: var(--ft-surface);
+  border: 1px solid var(--ft-border);
+  border-radius: var(--ft-radius-lg);
+  padding: 28px;
+  box-shadow: var(--ft-shadow-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: border-color var(--ft-duration) ease, box-shadow var(--ft-duration) ease;
+}
+
+.ft-goals-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--ft-shadow-sm);
+}
+
+.ft-goals-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ft-goals-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--ft-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ft-goals-card__icon-wrap--emerald {
+  background: var(--ft-emerald-subtle);
+  color: var(--ft-emerald-dark);
+}
+
+.ft-goals-card__icon-wrap--charcoal {
+  background: var(--ft-surface-subtle);
+  color: var(--ft-charcoal);
+}
+
+.ft-goals-card__icon-wrap--indigo {
+  background: var(--ft-indigo-subtle);
+  color: var(--ft-indigo);
+}
+
+.ft-goals-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  letter-spacing: -0.01em;
+}
+
+.ft-goals-card__sub {
+  font-size: 13px;
+  color: var(--ft-text-secondary);
+  margin-top: 2px;
+}
+
+.ft-goals-card__sub strong {
+  color: var(--ft-emerald-dark);
+  font-weight: 700;
+}
+
+/* Fields Grid */
+.ft-goals-card__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Field Item */
+.ft-goal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ft-goal-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ft-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.ft-goal-field__input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ft-goal-field__input-wrap input {
+  width: 100%;
+  padding: 12px 64px 12px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ft-charcoal);
+  background: var(--ft-canvas);
+  border: 1.5px solid var(--ft-border);
+  border-radius: var(--ft-radius-sm);
+  outline: none;
+  transition: all var(--ft-duration) ease;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+.ft-goal-field__input-wrap input:focus {
+  background: var(--ft-surface);
+  border-color: var(--ft-emerald);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.ft-goal-field__unit {
+  position: absolute;
+  right: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ft-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.ft-goal-field__hint {
+  font-size: 12px;
+  color: var(--ft-text-muted);
+  line-height: 1.35;
+}
+
+/* Protein Priority Highlight */
+.ft-goal-field--primary label {
+  color: var(--ft-emerald-dark);
+}
+
+.ft-goal-field--primary .ft-goal-field__input-wrap input {
+  border-color: var(--ft-emerald-border);
+  background: #f0fdf4;
+}
+
+.ft-goal-field--primary .ft-goal-field__input-wrap input:focus {
+  border-color: var(--ft-emerald);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.16);
+}
+
+/* Save Bar */
+.ft-goals__save-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+
+.ft-goals__save-btn {
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: var(--ft-radius-md);
+  background: var(--ft-charcoal);
+  color: #ffffff;
+  box-shadow: var(--ft-shadow-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all var(--ft-duration) var(--ft-ease);
+}
+
+.ft-goals__save-btn:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+  box-shadow: var(--ft-shadow-lg);
+}
+
+.ft-goals__save-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .ft-goals {
+    gap: 20px;
+  }
+
+  .ft-goals__title {
+    font-size: 26px;
+  }
+
+  .ft-goals-card {
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .ft-goals-card__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ft-goals__save-bar {
+    padding-top: 8px;
+  }
+
+  .ft-goals__save-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ft-toast {
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+  }
+}
